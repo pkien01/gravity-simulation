@@ -30,6 +30,7 @@ vel = np.array(vel)
 
 fig = plt.figure()
 ax = fig.add_subplot(1, 1, 1)
+
 def animate(frame):
     for t in range(100):
         for i in range(n):
@@ -48,13 +49,15 @@ def animate(frame):
     ax.set_ylim(-lim_D, lim_D)
 
     total_days = 100*frame
-    plt.suptitle("%d years, %d days" % (total_days//365, total_days%365))
+    ax.set_title("%d years, %d days" % (total_days//365, total_days%365))
     
-    plt.xlabel('x-coordinate (m)',fontsize=15)
-    plt.ylabel('y-coordinate (m)',fontsize=15)
+    ax.set_xlabel('x-coordinate (m)',fontsize=10)
+    ax.set_ylabel('y-coordinate (m)',fontsize=10)
+    
 
     planet_plot, = ax.plot(pos[1:,0], pos[1:, 1], "b.")
     star_plot, = ax.plot(*pos[0], "r.")
+
     return planet_plot, star_plot
 
 ani = FuncAnimation(fig, animate, frames=None, interval=1)

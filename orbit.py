@@ -79,7 +79,6 @@ plt.xlabel('x-coordinate (m)',fontsize=15)
 plt.ylabel('y-coordinate (m)',fontsize=15)
 
 plt.grid()
-plt.savefig('Ph1401_example_python.png')
-plt.savefig('Ph1401_example_python.pdf')
+plt.savefig('orbit.png')
 
 plt.show()

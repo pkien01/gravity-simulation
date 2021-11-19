@@ -35,7 +35,7 @@ The orbital velocity of the sun is
 <img src="formulas/vorb_sun.gif"> 
 <br/>so that the total momentum of the system is zero and the reference frame is the center of mass's.
 <br/><br/>
-Note that during visualization, I plotted the sun and planets as markers with size propotional to the log of their relative sizes (as the their relatives sizes are very disproportionate to each other):
+Note that during visualization, I plotted the sun and planets as markers with size propotional to the log of their relative diameters (as the their relatives diameters are very disproportionate to each other):
 <br/>
 <img src="formulas/s.gif">
 <br/>

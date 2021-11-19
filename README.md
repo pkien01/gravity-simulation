@@ -13,13 +13,13 @@ And hence, object *i* accelerates at
 <br/><br/>
 <img src="formulas/acc.gif"> 
 <br/><br/>
-Once we have the acceleration, we can approximate the velocity and hence, position of that object *i* at each time step *t*
-<br/><br/>
+Once we have the acceleration, we can approximate the velocity and hence, position of that object *i* at each time step *t* with the time duration <img src="formulas/dt.gif"> 
+between every iteration
+<br/><br/> 
 <img src="formulas/vel.gif">
 <br>
 <img src="formulas/pos.gif">
 <br/><br/>
-
 ## More details 
 
 I initialize the position and velocity as follows:

@@ -7,7 +7,7 @@ For a closed n-bodies system, the net gravitational force exert on object *i* is
 <br/><br/>
 <img src="formulas/force.gif">
 <br/>
-where ![](formulas/m_i.gif) and ![](formulas/m_j.gif) are the masses of object *i* and *j*, <img src="formulas/G.gif"> is the gravity constant, <img src="formulas/r.gif"> is the relative position vector between object *i* and object *j*
+where ![](formulas/m_i.gif) and ![](formulas/m_j.gif) are the masses of object *i* and *j*,  the gravity constant G is <img src="formulas/G.gif">, <img src="formulas/r.gif"> is the relative position vector between object *i* and object *j*
 <br/>
 And hence, object *i* accelerates at 
 <br/><br/>

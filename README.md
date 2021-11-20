@@ -51,7 +51,7 @@ Or if you are using Anaconda, then it is
 ```git clone https://github.com/pkien01/gravity-simulation```
 - Finally, run the script: ```python3 solar_system_simulator.py```
 
-# Demo
+## Demo
 Here is the result:
 <br/>
 <img src="https://github.com/pkien01/gravity-simulation/blob/master/solar_system.gif">

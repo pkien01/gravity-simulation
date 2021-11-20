@@ -3,7 +3,7 @@
 This project is a simulation of the solar system I created.
 
 ## Formulas
-For a closed n-body, the net gravitational force exert on object *i* is
+For a closed n-bodies system, the net gravitational force exert on object *i* is
 <br/><br/>
 <img src="formulas/force.gif">
 <br/>

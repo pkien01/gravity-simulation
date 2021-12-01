@@ -6,9 +6,8 @@ import random
 
 n = 10
 name_id = {'SUN': 0, 'MERCURY':1, 'VENUS': 2, 'EARTH': 3, 'MARS': 4, 'JUPITER': 5, 'SATURN': 6,	'URANUS': 7, 'NEPTUNE': 8, 'PLUTO': 9}
-mass = [m*1e24 for m in [1.98847e6, 0.330, 4.87, 5.97, 0.642,	1898, 568, 86.8, 102, 0.0146]]
-dist = [d*1e9 for d in [0., 57.9, 108.2, 149.6, 227.9,	778.6,	1433.5,	2872.5,	4495.1,	5906.4]]
-orbital_vel = [v*1e3 for v in [0., 47.4, 35.0, 29.8, 24.1, 13.1, 9.7, 6.8, 5.4, 4.7]]
+mass = [m*1e24 for m in [1.98847e6, 0.330, 4.87, 5.97, 0.642, 1898, 568, 86.8, 102, 0.0146]]
+dist = [d*1e9 for d in [0., 46.0, 107.5, 147.1, 206.6, 740.5, 1352.6, 2741.3, 4444.5, 4436.8]]
 diam = [1.3927e6, 4879, 12104, 12756, 6792, 142984, 120536, 51118, 49528, 2370]
 min_diam = min(diam)
 rel_sz = [math.floor(math.log(sz / min_diam))*3 + 1 for sz in diam]
@@ -23,7 +22,7 @@ for i in range(n):
     theta_r = random.uniform(0, math.pi*2)
     pos[i,:] = np.array([dist[i]*math.cos(theta_r), dist[i]*math.sin(theta_r)])
     if i > 1:
-        v_mag = orbital_vel[i]
+        v_mag = math.sqrt(G*mass[0]/dist[i])
         theta_v = math.pi/2 + theta_r
         vel[i,:] = np.array([v_mag*math.cos(theta_v), v_mag*math.sin(theta_v)])
         net_p += mass[i]*vel[i]

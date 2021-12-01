@@ -18,16 +18,19 @@ dt = 24*3600
 pos = np.zeros([n, 2])
 vel = np.zeros([n, 2])
 net_p = 0
-for i in range(n):
+net_xm = 0
+for i in range(1, n):
     theta_r = random.uniform(0, math.pi*2)
     pos[i,:] = np.array([dist[i]*math.cos(theta_r), dist[i]*math.sin(theta_r)])
-    if i > 1:
-        v_mag = math.sqrt(G*mass[0]/dist[i])
-        theta_v = math.pi/2 + theta_r
-        vel[i,:] = np.array([v_mag*math.cos(theta_v), v_mag*math.sin(theta_v)])
-        net_p += mass[i]*vel[i]
+    net_xm += mass[i]*pos[i]
+
+    v_mag = math.sqrt(G*mass[0]/dist[i])
+    theta_v = math.pi/2 + theta_r
+    vel[i,:] = np.array([v_mag*math.cos(theta_v), v_mag*math.sin(theta_v)])
+    net_p += mass[i]*vel[i]
+
+pos[0,:] = -net_xm/mass[0]
 vel[0,:] = -net_p/mass[0]
-vel = np.array(vel)
 
 fig = plt.figure()
 ax = fig.add_subplot(1, 1, 1)

@@ -54,6 +54,7 @@ for i in range(n):
     cur_orbit = np.array(orbit[i])
     orbit_plot[i], = ax.plot(cur_orbit[:,0], cur_orbit[:,1], linewidth=1.)
 
+
 ax.legend(orbit_plot, name_id.keys())
 def animate(frame, display_freq=80):
     orbit_displayed = False
@@ -67,12 +68,13 @@ def animate(frame, display_freq=80):
 
             vel[i] += net_acc*dt 
             pos[i] += vel[i]*dt
-
+	
             omega = math.hypot(*vel[i])/math.hypot(*pos[i])
             sweep_angle[i] += omega*dt
             orbit[i].append(pos[i].copy())
             if sweep_angle[i] > 2.*math.pi*3:
                 orbit[i].pop(0)
+         
            
     for i in range(n): 
         #orbit[i].append(pos[i].copy())
@@ -91,4 +93,4 @@ def animate(frame, display_freq=80):
 if __name__ == "__main__":
     anim = FuncAnimation(fig, animate, frames=None, interval=30, repeat=False)
     plt.show()
-    #anim.save('solar_system.gif', fps=30)
+    anim.save('solar_system.gif', fps=30)

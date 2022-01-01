@@ -32,8 +32,8 @@ where <img src="formulas/D.gif"> and <img src="formulas/vi_orb.gif"> are the dis
 <br/><br/>
 The position and velocity of the sun is initialized as
 <br/>
-<img src="https://www.HostMath.com/Show.aspx?Code=x_%7Bsun%7D%20%3D%20-%5Cfrac%7B1%7D%7Bm_%7Bsun%7D%7Dm_i%5Cvec%7Bx_i%7D">
-<img src="formulas/vorb_sun.gif"> 
+<img src="formulas/x_sun.gif">
+<img src="formulas/v_sun.gif"> 
 <br/>so that the reference frame is the center of mass's.
 <br/><br/>
 Note that during visualization, I plotted the sun and planets as markers with size propotional to the log of their relative diameters (as the their relatives diameters are very disproportionate to each other):

@@ -30,10 +30,11 @@ I initialize the position and velocity as follows:
 <br/>
 where <img src="formulas/D.gif"> and <img src="formulas/vi_orb.gif"> are the distance from the Sun's center and the orbital velocity of the planets obtained from [NASA planetary fact sheet](https://nssdc.gsfc.nasa.gov/planetary/factsheet/). I chose <img src="formulas/theta.gif"> randomly in the range <img src="formulas/02pi.gif">. The initial acceleration doesn't matter because I recompute it at every timestep in the for loop. 
 <br/><br/>
-The orbital velocity of the sun is 
+The position and velocity of the sun is initialized as
 <br/>
+<img src="https://www.HostMath.com/Show.aspx?Code=x_%7Bsun%7D%20%3D%20-%5Cfrac%7B1%7D%7Bm_%7Bsun%7D%7Dm_i%5Cvec%7Bx_i%7D">
 <img src="formulas/vorb_sun.gif"> 
-<br/>so that the total momentum of the system is zero and the reference frame is the center of mass's.
+<br/>so that the reference frame is the center of mass's.
 <br/><br/>
 Note that during visualization, I plotted the sun and planets as markers with size propotional to the log of their relative diameters (as the their relatives diameters are very disproportionate to each other):
 <br/>

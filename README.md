@@ -33,6 +33,7 @@ where <img src="formulas/D.gif"> and <img src="formulas/vi_orb.gif"> are the dis
 The position and velocity of the sun is initialized as
 <br/>
 <img src="formulas/x_sun.gif">
+<br/>
 <img src="formulas/v_sun.gif"> 
 <br/>so that the reference frame is the center of mass's.
 <br/><br/>
